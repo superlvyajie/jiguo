@@ -75,6 +75,6 @@ window.onload = function() {
 
 
     $(".public ul,.experience ul").on("click","li",function() {
-        location.href = "http://127.0.0.1:5500/jiguo/use-detail.html";
+        location.href = "../use-detail.html";
     })
 }

@@ -42,7 +42,7 @@ window.onload = function() {
     })
 
     $(".newlist,.hotlist").on("click","li",function() {
-        location.href = "http://127.0.0.1:5500/jiguo/detail.html";
+        location.href = "../detail.html";
     })
 
 

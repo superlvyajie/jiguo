@@ -5,7 +5,8 @@
 
 .all {
   width: 1000px;
-  margin: 0px auto;
+  margin: 50px auto;
+  overflow: hidden;
 }
 
 .all h1 {
