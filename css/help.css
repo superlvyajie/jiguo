@@ -1,0 +1,130 @@
+.hotlist {
+  display: none;
+}
+
+.hotlist,
+.newlist {
+  padding-top: 25px;
+  background-color: #f7f7f7;
+}
+
+.hotlist ul,
+.newlist ul {
+  overflow: hidden;
+}
+
+.hotlist ul li,
+.newlist ul li {
+  position: relative;
+  z-index: 5;
+  float: left;
+  width: 222px;
+  height: 227px;
+  margin-right: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+
+.hotlist ul li:hover,
+.newlist ul li:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.hotlist ul li img,
+.newlist ul li img {
+  width: 222px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.hotlist ul li:nth-child(4n),
+.newlist ul li:nth-child(4n) {
+  margin: 0;
+}
+
+.hotlist ul li p,
+.newlist ul li p {
+  font-size: 14px;
+  padding: 0 9px;
+  margin-bottom: 25px;
+  color: #3a333a;
+}
+
+.hotlist ul li .comment,
+.newlist ul li .comment {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.hotlist ul li .comment span,
+.newlist ul li .comment span {
+  font-size: 12px;
+  color: #a8a4a1;
+}
+
+.hotlist ul li .comment span i,
+.newlist ul li .comment span i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  background: url(./img/xinRedo.png) no-repeat;
+  background-size: 12px 12px;
+}
+
+.hotlist ul li .comment .word,
+.newlist ul li .comment .word {
+  margin-left: 5px;
+}
+
+.hotlist ul li .comment .word i,
+.newlist ul li .comment .word i {
+  background-image: url(./img/zan.png);
+}
+
+.hotlist ul li .p1,
+.newlist ul li .p1 {
+  position: absolute;
+  top: 5px;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.hotlist ul li .p2,
+.newlist ul li .p2 {
+  position: absolute;
+  top: 10px;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  border: 1px solid #dfdfdf;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.hotlist .nomore,
+.hotlist .clickmore,
+.newlist .nomore,
+.newlist .clickmore {
+  text-align: center;
+  margin: 35px 0 50px;
+  color: #ff2b2d;
+  cursor: pointer;
+}
+
+.hotlist .nomore img,
+.hotlist .clickmore img,
+.newlist .nomore img,
+.newlist .clickmore img {
+  vertical-align: middle;
+  margin-right: 3px;
+}
