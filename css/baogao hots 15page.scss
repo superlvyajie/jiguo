@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.top {
+    text-align: center;
+    width: 1000px;
+    margin: 0px auto;
+
+    p {
+        margin-top: 45px;
+        margin-bottom: 40px;
+        font-size: 39px;
+        font-weight: 500;
+    }
+
+    span {
+        padding: 9px 64px;
+        font-size: 18px;
+
+        &:last-of-type {
+            color: red;
+            border-bottom: 4px solid red;
+        }
+    }
+}
+
+.nav {
+    background-color: #f7f7f7;
+
+    .demo {
+        width: 1000px;
+        margin: 0px auto;
+        margin-top: 13px;
+        overflow: hidden;
+
+        .first_ {
+            list-style: none;
+            float: left;
+
+            li {
+                overflow: hidden;
+                width: 700px;
+
+                .all {
+                    float: left;
+                    background-color: #f7f7f7;
+                    margin-top: 25px;
+                    border: 1px solid #f0ece9;
+                    position: relative;
+                    img {
+                        width: 700px;
+                        height: 410px;
+                    }
+                    .out{
+                        width: 700px;
+                        position: absolute;
+                        bottom: 0px;
+                        background-color: rgba(247, 247, 247, 0.9);
+                        p {
+                            margin: 20px 0px 32px 20px;
+                            font-size: 18px;
+                        }
+                        .one {
+                            overflow: hidden;
+                            margin-bottom: 20px;
+                            .left {
+                                float: left;
+                                margin-left: 24px;
+    
+                                span {
+                                    font-size: 12px;
+    
+                                    &:first-of-type {
+                                        color: red;
+                                    }
+    
+                                    &:last-of-type {
+                                        color: silver;
+                                    }
+                                }
+                            }
+    
+                            .right {
+                                float: right;
+                                margin-right: 24px;
+    
+                                span:first-of-type {
+                                    color: silver;
+                                    font-size: 12px;
+                                    margin-right: 5px;
+                                    padding-left: 13px;
+                                    background: url(./img/xin.png) no-repeat 0px 3px;
+                                }
+    
+                                span:last-of-type {
+                                    color: silver;
+                                    font-size: 12px;
+                                    padding-left: 13px;
+                                    background: url(./img/reply.png) no-repeat 0px 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .two {
+                    float: left;
+                    width: 700px;
+                    height: 48px;
+                    border: 1px solid #eaeaea;
+                    margin-top: 12px;
+                    text-align: center;
+                    line-height: 48px;
+                    font-size: 14px;
+                    color: #aaa6a5;
+                }
+            }
+            .foot{
+                margin: 50px 0px;
+                text-align: center;
+                span{
+                    color: red;
+                    font-weight: 500;
+                    padding: 0px 35px;
+                    background: url(/css/img/more.png) no-repeat 7px 7px;
+                }
+            }      
+        }
+
+        .second_ {
+            float: left;
+            margin-top: 25px;
+            margin-left: 25px;
+            width: 270px;
+            .tit {
+                margin-bottom: 20px;
+                span {
+                    &:first-of-type{
+                     border: 3px solid red;   
+                     background-color: red;                    
+                    }
+                    &:last-of-type{
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .dom{
+                p{
+                    margin-top: 15px;
+                }
+                span{
+                    margin-top: 8px;
+                    font-size: 12px;
+                    color: #a3a3a3;
+                }
+            }
+            .dim{
+                p{
+                    margin-top: 8px;
+                    font-size: 12px;
+                    color: #a3a3a3;
+                    &:first-of-type{
+                        margin-top: 15px;
+                        font-size: 16px;
+                        color: black;
+                    }
+                }
+            }
+            .tito{
+                margin-top: 65px;
+                margin-bottom: 20px;
+                span {
+                    &:first-of-type{
+                     border: 3px solid red;   
+                     background-color: red;                    
+                    }
+                    &:last-of-type{
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}

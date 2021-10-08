@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register 16page.min.css">
+</head>
+
+<body>
+    <div class="bc">
+        <div class="nav">
+            <div class="top">
+                <span> </span>
+                注册极果
+            </div>
+            <div class="all">
+                <input type="text" placeholder="请输入登录手机号" class="input_">
+                <input type="text" placeholder="请输入图片校验码" class="inputi">
+                <span class="imgo"><img src="./img/imgCode.jpg" alt=""></span>
+                <input type="text" placeholder="请输入4位数字验证码" class="inputi">
+                <button class="gain">获取验证码</button>
+                <input type="text" placeholder="请输入用户名" class="input_" id="username">
+                <input type="text" placeholder="请输入新密码" class="input_" id="pwd">
+                <input type="text" placeholder="确定新密码" class="input_" id="pwd">
+                <button class="res" onclick="reg()">立即注册</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var img_ = document.getElementsByClassName('imgo')[0]
+    var gain_ = document.getElementsByClassName('gain')[0];
+    var num = 60;
+    var judge = true;
+    gain_.onclick = function () {
+        if (judge) {
+            judge = false;
+            res = setInterval(function () {
+                img_.style.display = 'block'
+                num--;
+                gain_.innerHTML = num + 's';
+                if (num == 0) {
+                    img_.style.display = 'none'
+                    clearInterval(res);
+                    num = 60;
+                    judge = true;
+                    gain_.innerHTML = '获取验证码';
+                }
+            }, 1000)
+        }
+    }
+    function reg() {
+        var data = {username:username.value,password:pwd.value}
+        var oajax = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
+        console.log(oajax);
+        oajax.open('post', 'http://192.168.1.62:3000/users/register', true);
+        oajax.send(data);
+        oajax.onreadystatechange = function () {
+            // console.log(oajax.readyState);
+            if (oajax.readyState === 4) {
+                if (oajax.status === 200) {
+                    console.log(oajax.responseText);
+                }
+            }
+        }
+    }
+</script>
+
+</html>

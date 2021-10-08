@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/kuwa pins 4 page.min.css">
+</head>
+
+<body>
+    <div class="top">
+        <p>发现酷玩</p>
+        <a href="./kuwan news 2 page.html">最新</a>
+        <a href="./kuwan hots 3 page.html">最热</a>
+        <a href="./kuwan pins 4 page.html">品类</a>
+    </div>
+    <div class="demo">
+        <div class="all">
+        </div>
+    </div>
+
+    <script src="./js/template-web.js"></script>
+    <script id="art_category" type="textml">
+        <% for(var i = 0;i<value.length;i++) { %>
+                <div class="floor">
+                    <p class="title"><%= value[i].title %></p>
+                    <div class="center">
+                        <div class="every">
+                            <div><img src="./img/cat_1.png" alt=""></div>
+                            <div>电动牙刷(<span>21</span>)</div>
+                        </div>
+                        <div class="every">
+                            <div><img src="./img/cat_2.png" alt=""></div>
+                            <div>电动牙刷(<span>21</span>)</div>
+                        </div>
+                        <div class="every">
+                            <div><img src="./img/cat_3.png" alt=""></div>
+                            <div>电动牙刷(<span>21</span>)</div>
+                        </div>
+                        <div class="every">
+                            <div><img src="./img/cat_4.png" alt=""></div>
+                            <div>电动牙刷(<span>21</span>)</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <% for(var j=0;j<value[i].list.length;j++) { %>
+                            <div><%= value[i].list[j].productName %>(<span><%= value[i].list[j].nums %></span>)</div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+        </script>
+    <script>
+        var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        oajax.open('get', 'http://192.168.1.62:3000/data/play_category.json', true);
+        oajax.send();
+        oajax.onreadystatechange = function () {
+            if (oajax.readyState == 4) {
+                if (oajax.status == 200) {
+                    var res = JSON.parse(oajax.responseText);
+                    render_html(res);
+                }
+            }
+        }
+
+        function render_html(res) {
+            var html = template('art_category', {
+                value: res
+            });
+            document.getElementsByClassName('all')[0].innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

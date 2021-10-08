@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/kuwan news 2 page.min.css">
+</head>
+
+<body>
+    <div class="top">
+        <p>发现酷玩</p>
+        <a href="./kuwan news 2 page.html">最新</a>
+        <a href="./kuwan hots 3 page.html">最热</a>
+        <a href="./kuwan pins 4 page.html">品类</a>
+    </div>
+    <div class="nav">
+        <div class="demo">
+            <ul class="first_">
+                <!-- <li>
+                    <img src="./img/k1.jpg" alt="">
+                    <p>SCiO 微型光谱仪</p>
+                    <p>可以测定食物成分及营养</p>
+                    <div>
+                        <span></span>
+                        <div>
+                        <span></span>
+                        <span></span>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script id="top" type="text/html">
+        <% for(var i = 0; i < value.length; i++){ %>
+        <% for(var j = 0; j < value[i].length; j++){ %>
+        <li>
+            <img src=" <%= value[i][j].img %>" alt="">
+            <p> <%= value[i][j].text %></p>
+            <p><%= value[i][j].description %></p>
+            <div>
+                <span><%= value[i][j].price %></span>
+                <div class="rig">
+                    <span><%= value[i][j].like %></span>
+                    <span><%= value[i][j].words %></span>
+                </div>
+            </div>
+        </li>
+        <% } %>
+        <% } %>
+    </script>
+    <script src="./js/template-web.js"></script>
+    <script>
+        var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        oajax.open('get', 'http://192.168.1.62:3000/data/play_new.json', true);
+        oajax.send();
+        oajax.onreadystatechange = function () {
+            if (oajax.readyState == 4) {
+                if (oajax.status == 200) {
+                    var res = JSON.parse(oajax.responseText);
+                    render_html(res);
+                }
+            }
+        }
+
+        function render_html(res) {
+            var html = template('top', {
+                value: res
+            });
+            document.getElementsByClassName('first_')[0].innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

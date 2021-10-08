@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="img">
+</body>
+<script src="./javascripts/jquery-1.12.2.min.js"></script>
+<script>
+    /* $.get('/use/public',function(data){
+        console.log(data);
+        console.log(JSON.parse(data));
+    }); */
+   /*  $.get('/useing/master',function(data){
+        console.log(data);
+        // console.log(JSON.parse(data));
+    }); */
+    /* $.get('/guid/hot',function(data){
+        console.log(data);
+        // console.log(JSON.parse(data));
+    }); */
+    
+    $.get('/report/hot',function(data){
+        console.log(data);
+        $(".img").attr("src",data[0].img);
+        // console.log(JSON.parse(data));
+    });
+
+    // $.get('/play/new',function(data){
+    //     console.log(data);
+    //     $("img").attr("src",data.img);
+    // });
+</script>
+</html>

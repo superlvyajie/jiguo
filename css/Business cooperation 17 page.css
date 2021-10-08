@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.all {
+  width: 1000px;
+  margin: 0px auto;
+}
+
+.all h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-left: 35px;
+  margin-bottom: 4px;
+}
+
+.all ul {
+  padding: 0px 35px;
+  color: #616063;
+  list-style: none;
+}
+
+.all ul a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #616063;
+}
+
+.all ul li {
+  font-size: 16ox;
+  margin-top: 8px;
+  line-height: 24px;
+}
+
+.all .leftlist {
+  float: left;
+  width: 270px;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+
+.all .leftlist hr {
+  width: 230px;
+  height: 1px;
+  margin: 0px auto;
+}
+
+.all .leftlist .lista {
+  margin-top: 11px;
+  margin-bottom: 25px;
+}
+
+.all .leftlist .listb {
+  margin-bottom: 35px;
+}
+
+.all .article {
+  float: right;
+  width: 700px;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+
+.all .article hr {
+  width: 635px;
+  height: 1px;
+  margin: 0px auto;
+}
+
+.all .article .arta {
+  margin-top: 27px;
+}
+
+.all .article .arta :first-of-type {
+  margin-top: 24px;
+}
+
+.all .article .artb {
+  margin-top: 57px;
+  margin-bottom: 48px;
+}
+
+.all .article .artb li:first-of-type {
+  margin-top: 24px;
+}
+
+.all .article .artb p:first-of-type {
+  margin-top: 56px;
+}
+
+.all .article .artc {
+  margin-bottom: 24px;
+}
+
+.all .article .artc li:first-of-type {
+  margin-top: 24px;
+}
+
+.all .article .artc p:first-of-type {
+  margin-top: 56px;
+}

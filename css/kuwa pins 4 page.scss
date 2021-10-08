@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.top {
+    text-align: center;
+    width: 1000px;
+    margin: 0px auto;
+    p {
+        margin-top: 45px;
+        margin-bottom: 40px;
+        font-size: 39px;
+        font-weight: 500;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 9px 64px;
+        font-size: 18px;
+        color: black;
+
+        &:last-of-type {
+            color: red;
+            border-bottom: 4px solid red;
+        }
+    }
+
+}
+.demo{
+    background-color: #f7f7f7;
+    .all{
+        width: 1000px;
+        margin: 0px auto;
+        .floor {
+            background-color:white;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+            padding-top: 19px;
+            margin: 25px 0 10px 0;
+        
+            .title {
+                font-size: 15px;
+                width: 100%;
+                line-height: 25px;
+                border-left: 6px solid #FF4D3F;
+                padding-left: 24px;
+            }
+        
+            .center {
+                margin: 16px 25px 22px;
+                overflow: hidden;
+                font-size: 13px;
+        
+                .every {
+                    float: left;
+                    margin: 20px 0 0 60px;
+        
+                    &:nth-child(6n+1) {
+                        margin-left: 0;
+                    }
+        
+                    div {
+                        &:first-of-type {
+                            border-radius: 50%;
+                            width: 92px;
+                            margin: 0 auto;
+                            overflow: hidden;
+                            background-color: #F6F6F6;
+        
+                            img {
+                                width: 100%;
+                            }
+                        }
+        
+                        &:last-of-type {
+                            margin-top: 16px;
+                            text-align: center;
+                            color:#B8C0C6;
+                        }
+                    }
+                }
+            }
+        
+            .foot {
+                padding: 0 45px 16px;
+                border-top: 1px dashed #EAEAEA;
+                overflow: hidden;
+        
+                div {
+                    float: left;
+                    width: 120px;
+                    text-align: center;
+                    color: #B8C0C6;
+                    font-size: 13px;
+                    margin: 20px 0 0 30px;
+        
+                    &:nth-child(6n+1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }    
+}
+
