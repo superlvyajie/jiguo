@@ -1,0 +1,101 @@
+
+.hotlist {
+    display: none;
+}
+.hotlist,
+.newlist {
+    padding-top: 25px;
+    background-color: #f7f7f7;
+    ul {
+        overflow: hidden;
+        li {
+            position: relative;
+            z-index: 5;
+            float: left;
+            width: 222px;
+            height: 227px;
+            margin-right: 30px;
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+            margin-bottom: 35px;
+            &:hover {
+                transform: translateY(-5px) scale(1.1);
+            }
+            img {
+                width: 222px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                margin-bottom: 8px;
+            }
+            &:nth-child(4n) {
+                margin: 0;
+            }
+
+
+            p {
+                font-size: 14px;
+                padding: 0 9px;
+                margin-bottom: 25px;
+                color: #3a333a;
+            }
+
+            .comment {
+                position: absolute;
+                bottom: 12px;
+                right: 10px;
+                text-align: right;
+                padding-right: 10px;
+                span {
+                    font-size: 12px;
+                    color: #a8a4a1;
+                    i {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        vertical-align: middle;
+                        background: url(./img/xinRedo.png) no-repeat;
+                        background-size: 12px 12px;
+                    }
+                }
+                .word {
+                    margin-left: 5px;
+                    i {
+                        background-image: url(./img/zan.png);
+                    }
+                }
+            }
+
+            .p1 {
+                position: absolute;
+                top: 5px;
+                left: 5%;
+                width: 90%;
+                height: 100%;
+                border: 1px solid #dfdfdf;
+                border-radius: 5px;
+                z-index: 1;
+            }
+            .p2 {
+                position: absolute;
+                top: 10px;
+                left: 10%;
+                width: 80%;
+                height: 100%;
+                border: 1px solid #dfdfdf;
+                z-index: 1;
+                border-radius: 5px;
+            }
+        }
+    }
+    .nomore,
+    .clickmore {
+        text-align: center;
+        margin: 35px 0 50px;
+        color: #ff2b2d;
+        cursor: pointer;
+       img {
+           vertical-align: middle;
+           margin-right: 3px;
+       }
+    }
+}
